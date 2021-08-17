@@ -1,21 +1,16 @@
-import {useState, useEffect} from "react";
 import GifGridItem from "./GifGridItem";
-import {getGifs} from "../helpers/getGifs";
+import {useFetchGifs} from "../hooks/useFetchGifs";
 
 const GifGrid = ({category}) => {
-
-    const [images, setImages] = useState([]);
-
-    // Hook para que la funcion getGif() solo se ejecute una vez a pesar de haber cambios en el estado del componente
-    useEffect(() => {
-        getGifs(category).then(setImages);
-    }, [category]);
+    const {data: images, loading} = useFetchGifs(category);
 
     return (
         <>
             <h3>{category}</h3>
-            <div className="card-grid">
 
+            {loading && <p>Cargando...</p>}
+
+            <div className="card-grid">
                 {
                     images.map(img => (
                         <GifGridItem
