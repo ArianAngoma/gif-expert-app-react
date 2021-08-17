@@ -15,7 +15,7 @@ const AddCategory = ({setCategories}) => {
 
         // Llamar la propiedad setCategories del componente padre GifExpertApp
         if (inputValue.trim().length > 2) {
-            setCategories(cats => [...cats, inputValue]);
+            setCategories(cats => [inputValue, ...cats]);
 
             // Limpiar el input al enviar el formulario
             setInputValue('');
