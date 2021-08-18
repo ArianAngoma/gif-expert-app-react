@@ -4,7 +4,12 @@ exports[`Test to component <GifGridItem/> Should display the component <GifGridI
 <div
   className="card animate__animated animate__fadeIn"
 >
-  <img />
-  <p />
+  <img
+    alt="one punch GIF by Adult Swim"
+    src="https://media2.giphy.com/media/VXJWhaO7afRe/giphy.gif?cid=9ca6d3b12blk4snunf6e74rkyaojo7rnjoz33ldsx2mcr7ev&rid=giphy.gif&ct=g"
+  />
+  <p>
+    one punch GIF by Adult Swim
+  </p>
 </div>
 `;
