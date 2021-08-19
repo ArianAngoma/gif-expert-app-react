@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test to component <GifGrid/> Should display the component <GifGrid/> correctly 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Anime
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Cargando...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
+
+exports[`Test to component <GifGrid/> should show items when loading images useFetchGifs 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Anime
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ayMW3eqvuP00o"
+      key="ayMW3eqvuP00o"
+      title="No Face GIF by Spirited Away"
+      url="https://giphy.com/gifs/spirited-away-no-face-ayMW3eqvuP00o"
+    />
+  </div>
+</Fragment>
+`;
