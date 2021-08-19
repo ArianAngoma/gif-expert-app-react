@@ -34,5 +34,29 @@ describe('Test to component <AddCategory/>', () => {
 
         // setCategories no se debería de haber llamado porque no se envía nada el input text
         expect(setCategories).not.toHaveBeenCalled();
+    });
+
+    test('Should setCategories and clear the text box', () => {
+        const value = 'Anime';
+        const input = wrapper.find('input');
+        // Simular handleInputChange
+        input.simulate('change', {target: {value}});
+
+        const form = wrapper.find('form');
+        // Simular handleSubmit
+        form.simulate('submit', {
+            preventDefault() {
+            }
+        });
+
+        //  setCategories debe de ser llamado
+        expect(setCategories).toHaveBeenCalled();
+        // setCategories debe de ser llamado una vez
+        expect(setCategories).toHaveBeenCalledTimes(1);
+        // setCategories debe de ser llamado con una funcion
+        expect(setCategories).toHaveBeenCalledWith(expect.any(Function));
+
+        // Input debe de ser un string vacio
+        expect(input.prop('value')).toBe('');
     })
 })
