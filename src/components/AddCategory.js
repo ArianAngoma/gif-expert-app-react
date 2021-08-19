@@ -6,12 +6,15 @@ const AddCategory = ({setCategories}) => {
 
     // Handle para poder cambiar el estado de inputValue
     const handleInputChange = (e) => {
-        setInputValue(e.target.value)
+        setInputValue(e.target.value);
+        console.log('HandleInputChange called');
     }
 
     const handleSubmit = (e) => {
         // Previene el evento por default del formulario, en este caso que no recargue la página al enviar el formulario
         e.preventDefault();
+
+        console.log('Handle Submit');
 
         // Llamar la propiedad setCategories del componente padre GifExpertApp
         if (inputValue.trim().length > 2) {
