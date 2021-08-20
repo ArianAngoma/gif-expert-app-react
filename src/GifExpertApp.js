@@ -2,9 +2,9 @@ import {useState} from "react";
 import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
-const GifExpertApp = () => {
+const GifExpertApp = ({defaultCategories = ['One Punch']}) => {
     // const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
-    const [categories, setCategories] = useState(['One Punch']);
+    const [categories, setCategories] = useState(defaultCategories);
 
     // Agregar elemento al array con useState
     /*const handleApp = () => {
